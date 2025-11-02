@@ -35,6 +35,12 @@
                             <div class="float-right text-black-50">Already have an account?
                                 <a href="{{route('login')}}">Login</a>
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="on" name="remember" id="flexCheckDefault">
+                                <label class="form-check-label text-black-50" for="flexCheckDefault">
+                                    Remember Me
+                                </label>
+                            </div>
                     </div>
                     <div class="form-group mb-4">
                         <button type="submit" class="btn btn-dark text-center m-auto w-50"

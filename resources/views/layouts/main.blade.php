@@ -46,6 +46,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
+                    @if(auth()->user() && auth()->user()->role_id == 1)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.index')}}">Admin Panel</a>
+                    </li>
+                    @endif
                 </ul>
                 <ul class="navbar-nav mt-2 mt-lg-0">
                     <li class="nav-item">

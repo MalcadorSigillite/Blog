@@ -16,7 +16,6 @@ class PostService {
     public function create($data)
     {
         $name = $data['name'];
-        $tag_id = $data['tag_id'];
         $description = $data['description'];
         $content = $data['content'];
         $preview_image = Post::makePostImage($data['preview_image']);
@@ -27,7 +26,6 @@ class PostService {
 
             Post::create([
                 'name' => $name,
-                'tag_id' => $tag_id,
                 'description' => $description,
                 'content' => $content,
                 'preview_image' => $preview_image,

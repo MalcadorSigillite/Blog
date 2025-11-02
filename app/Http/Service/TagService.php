@@ -53,13 +53,17 @@ class TagService
 
     }
 
+    /**
+     * @param Tag $tag
+     * @return void
+     */
     public function delete(Tag $tag): void
     {
-        $tag->delete();
         $posts_count = Post::where('tag_id', $tag->id)->count();
         for($i = 0; $i < $posts_count; $i++) {
             Post::where('tag_id', $tag->id)->delete();
         }
+        $tag->delete();
     }
 
     /**

@@ -24,18 +24,20 @@ class RegisterRequest extends FormRequest
         return [
             'email' => 'required|string|email|max:255|unique:users,email',
             'password' => 'required|string|min:6',
-            'name' => 'required|string'
+            'name' => 'required|string',
+            'remember' => 'nullable'
         ];
     }
 
-    public function messages() : array {
+    public function messages(): array
+    {
         return [
-            'email.required' => 'This field is required',
-            'password.required' => 'This field is required',
-            'name.required' => 'This field is required',
-            'email.email' => 'This field is not a valid email address',
-            'password.min' => 'Password must be at least 6 characters',
-            'email.unique' => 'This email is already registered'
+            'email . required' => 'This field is required',
+            'password . required' => 'This field is required',
+            'name . required' => 'This field is required',
+            'email . email' => 'This field is not a valid email address',
+            'password . min' => 'Password must be at least 6 characters',
+            'email . unique' => 'This email is already registered'
         ];
     }
 

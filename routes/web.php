@@ -14,3 +14,7 @@ Route::get('login', [\App\Http\Controllers\Controller::class, 'login'])
 Route::prefix('')->group(
     base_path('routes/auth/routes.php'),
 );
+
+Route::prefix('admins')->group(
+    base_path('routes/admin/routes.php'),
+);
